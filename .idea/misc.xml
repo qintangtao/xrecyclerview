@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/listview_footer.xml" value="0.36820652173913043" />
+        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/listview_header.xml" value="0.36820652173913043" />
+        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/pull_to_refresh_head.xml" value="0.36820652173913043" />
+      </map>
+    </option>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
