@@ -20,27 +20,28 @@ import me.tatarka.bindingcollectionadapter2.ItemBinding
 class MainViewModel  : BaseViewModel() {
 
 
-    private val _items = MutableLiveData<MutableList<String>>()
-    val items: LiveData<MutableList<String>> = _items
+    private val _items = MutableLiveData<MutableList<Item>>()
+    val items: LiveData<MutableList<Item>> = _items
 
-    val itemBinding = ItemBinding.of<String>(BR.itemBean, R.layout.item_text)
+    val itemBinding = ItemBinding.of<Item>(BR.itemBean, R.layout.item_text)
 
-    val diff: DiffUtil.ItemCallback<String> = object : DiffUtil.ItemCallback<String>() {
-        override fun areItemsTheSame(oldItem: String, newItem: String): Boolean {
-            return oldItem == newItem
+    val adapter = MyBindingRecyclerViewAdapter<Item>()
+
+    val diff: DiffUtil.ItemCallback<Item> = object : DiffUtil.ItemCallback<Item>() {
+        override fun areItemsTheSame(oldItem: Item, newItem: Item): Boolean {
+            return oldItem.id == newItem.id
         }
 
-        override fun areContentsTheSame(oldItem: String, newItem: String): Boolean {
-            return oldItem == newItem
+        override fun areContentsTheSame(oldItem: Item, newItem: Item): Boolean {
+            return oldItem.name == newItem.name
         }
-
     }
 
     fun refreshData() {
 
         launchUI {
             launchFlow {
-                MutableList(50) { "item $it" }
+                MutableList(50) { Item(it, "item $it") }
             }
             .flowOn(Dispatchers.IO)
             .catch {
@@ -62,7 +63,10 @@ class MainViewModel  : BaseViewModel() {
         launchUI {
             launchFlow {
                 delay(1000)
-                MutableList(10) { "item $it" }
+                val maxIndex = _items.value?.size ?: 0
+                MutableList(10) {
+                    val id = maxIndex + it
+                    Item(id, "item $id") }
             }
                 .flowOn(Dispatchers.IO)
                 .catch {

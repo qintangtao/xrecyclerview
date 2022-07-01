@@ -24,6 +24,7 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:itemBinding="@{viewModel.itemBinding}"
             app:items="@{viewModel.items}"
+            app:adapter="@{viewModel.adapter}"
             app:diffConfig="@{viewModel.diff}" />
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
