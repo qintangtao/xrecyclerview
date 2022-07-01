@@ -3,8 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/app/src/main/res/layout/activity_main.xml" value="0.2203125" />
+        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/app/src/main/res/layout/item_text.xml" value="0.23489583333333333" />
         <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/listview_footer.xml" value="0.36820652173913043" />
-        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/listview_header.xml" value="0.36820652173913043" />
+        <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/listview_header.xml" value="0.3249370277078086" />
         <entry key="..\:/Qt/Qt5.12.2/Licenses/github/xrecyclerview/xrecyclerview/src/main/res/layout/pull_to_refresh_head.xml" value="0.36820652173913043" />
       </map>
     </option>
